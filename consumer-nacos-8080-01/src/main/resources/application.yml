@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: depart-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848  # nacos??????
+        #        server-addr: 127.0.0.1:8849,127.0.0.1:8851,127.0.0.1:8853
+        username: nacos
+        password: nacos
+#        服务隔离
+        group: MY_GROUP
+#        namespace: 37e210a9-f623-4c74-b50d-a118cc390071
