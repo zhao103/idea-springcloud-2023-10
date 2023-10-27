@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: depart-consumer
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        username: nacos
+        password: nacos
+        group: MY_GROUP
+        namespace: 37e210a9-f623-4c74-b50d-a118cc390071
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}
